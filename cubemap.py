@@ -53,30 +53,6 @@ class Script(modules.scripts.Script):
         unit_width = int(input_size[-1] / 3)
         unit_height = int(input_size[-2] / 2)
 
-        def top():
-            return (slice(None), slice(None), slice(0, 1), slice(1, -1))
-
-        def bottom():
-            return (slice(None), slice(None), slice(-1, None), slice(1, -1))
-
-        def left():
-            return (slice(None), slice(None), slice(1, -1), slice(0, 1))
-
-        def right():
-            return (slice(None), slice(None), slice(1, -1), slice(-1, None))
-            
-        def in_top():
-            return (slice(None), slice(None), slice(0, 1), slice(None))
-
-        def in_bottom():
-            return (slice(None), slice(None), slice(-1, None), slice(None))
-
-        def in_left():
-            return (slice(None), slice(None), slice(None), slice(0, 1))
-
-        def in_right():
-            return (slice(None), slice(None), slice(None), slice(-1, None))
-
         def rotate_tensor(tensor, d):
             return tensor
 
